@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓狗年齡換算器</title>
+    <link rel="stylesheet" href="./pet_age.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" data-pet="cat">🐱 貓咪</button>
+            <button class="tab" data-pet="dog">🐶 狗狗</button>
+        </div>
+
+        <div id="cat-content" class="tab-content active">
+            <h1><span class="icon">🐱</span>貓年齡換算器</h1>
+            <p class="subtitle">讓我們來看看您的貓咪相當於人類幾歲</p>
+            
+            <div class="form-group">
+                <label for="cat-name">貓貓名稱：</label>
+                <input type="text" id="cat-name" placeholder="請輸入貓貓的名字">
+                <span class="error" id="cat-name-error">請輸入貓貓的名字</span>
+            </div>
+
+            <div class="form-group">
+                <label for="cat-birth">貓出生日期：</label>
+                <input type="date" id="cat-birth">
+                <span class="error" id="cat-birth-error">請選擇出生日期</span>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateCatAge()">開始計算</button>
+
+            <div class="result" id="cat-result">
+                <p class="result-text" id="cat-result-text"></p>
+            </div>
+        </div>
+
+        <div id="dog-content" class="tab-content">
+            <h1><span class="icon">🐶</span>狗年齡換算器</h1>
+            <p class="subtitle">讓我們來看看您的狗狗相當於人類幾歲</p>
+            
+            <div class="form-group">
+                <label for="dog-name">狗狗名稱：</label>
+                <input type="text" id="dog-name" placeholder="請輸入狗狗的名字">
+                <span class="error" id="dog-name-error">請輸入狗狗的名字</span>
+            </div>
+
+            <div class="form-group">
+                <label for="dog-birth">狗出生日期：</label>
+                <input type="date" id="dog-birth">
+                <span class="error" id="dog-birth-error">請選擇出生日期</span>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateDogAge()">開始計算</button>
+
+            <div class="result" id="dog-result">
+                <p class="result-text" id="dog-result-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="references">
+        <h3>📚 參考資料來源</h3>
+        <div id="cat-reference" class="reference-content active">
+            <a href="https://www.purina.co.uk/articles/cats/senior/care/cats-age-in-human-years" target="_blank">Purina - Cat Years: How Old is my Cat in Human Years?</a>
+        </div>
+        <div id="dog-reference" class="reference-content">
+            <a href="https://www.akc.org/expert-advice/health/how-to-calculate-dog-years-to-human-years/" target="_blank">American Kennel Club - How to Calculate Dog Years to Human Years</a>
+        </div>
+    </div>
+
+    <script src="./pet_age.js" defer></script>
+</body>
+</html>
