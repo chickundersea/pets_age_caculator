@@ -166,14 +166,14 @@ input[type="date"]:focus {
 
 .result-text {
     color: #6b5444;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
 }
 
 .highlight {
     color: #d4a574;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .error {
